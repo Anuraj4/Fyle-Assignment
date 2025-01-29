@@ -15,8 +15,8 @@ export class AddUserComponent {
   name: string = '';
   workoutType: string = '';
   workoutMinutes: number = 0;
+  userAdded: boolean = false;
 
-  // eslint-disable-next-line no-useless-constructor
   constructor (private userService: UserService) {}
 
   addUser () {
@@ -35,5 +35,12 @@ export class AddUserComponent {
     this.name = '';
     this.workoutType = '';
     this.workoutMinutes = 0;
+
+    // Show success message
+    this.userAdded = true;
+
+    // Reset the flag after 2 seconds
+    // eslint-disable-next-line no-return-assign
+    setTimeout(() => this.userAdded = false, 2000);
   }
 }

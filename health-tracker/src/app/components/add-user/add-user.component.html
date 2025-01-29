@@ -3,5 +3,13 @@
     <input [(ngModel)]="name" placeholder="User Name" class="input" />
     <input [(ngModel)]="workoutType" placeholder="Workout Type" class="input" />
     <input [(ngModel)]="workoutMinutes" type="number" placeholder="Minutes" class="input" />
-    <button (click)="addUser()" class="btn">Add</button>
+    <button (click)="addUser()"
+        class="bg-blue-500 p-2 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-blue-300 btn">
+        Add
+    </button>
+    <div *ngIf="userAdded">
+        <p class="text-green-500">
+            <i class="pi pi-check"></i> User added successfully!
+        </p>
+    </div>
 </div>
