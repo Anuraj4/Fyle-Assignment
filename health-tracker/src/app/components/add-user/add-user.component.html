@@ -1,0 +1,7 @@
+<div class="p-4 bg-gray-100 rounded-md shadow-md">
+    <h2 class="text-xl font-bold">Add Workout</h2>
+    <input [(ngModel)]="name" placeholder="User Name" class="input" />
+    <input [(ngModel)]="workoutType" placeholder="Workout Type" class="input" />
+    <input [(ngModel)]="workoutMinutes" type="number" placeholder="Minutes" class="input" />
+    <button (click)="addUser()" class="btn">Add</button>
+</div>

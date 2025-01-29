@@ -1,0 +1,20 @@
+<p>workout-list works!</p>
+<div class="p-4">
+    <h2 class="text-xl font-bold">Workout List</h2>
+    <table class="table-auto w-full border-collapse border border-gray-400">
+        <thead>
+            <tr>
+                <th class="border px-4 py-2">Name</th>
+                <th class="border px-4 py-2">Workout</th>
+                <th class="border px-4 py-2">Minutes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td class="border px-4 py-2">{{ user.name }}</td>
+                <td class="border px-4 py-2">{{ user.workouts[0]?.type }}</td>
+                <td class="border px-4 py-2">{{ user.workouts[0]?.minutes }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

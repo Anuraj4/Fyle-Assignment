@@ -1,2 +1,9 @@
-<h1 class="text-2xl text-center font-bold mt-4">Welcome to Health Tracker
-</h1>
+<div class="container mx-auto p-4">
+  <h1 class="text-3xl font-bold text-center mb-8 bg-blue-200">{{ title }}</h1>
+
+  <!-- Render the AddUserComponent -->
+  <app-add-user></app-add-user>
+
+  <!-- Render the WorkoutListComponent -->
+  <app-workout-list></app-workout-list>
+</div>

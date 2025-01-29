@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { AddUserComponent } from './components/add-user/add-user.component';
+import { WorkoutListComponent } from './components/workout-list/workout-list.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [CommonModule, AddUserComponent, WorkoutListComponent], // Include the components here
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'health-tracker';
+  title = 'Health Tracker';
 }
